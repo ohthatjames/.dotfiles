@@ -9,5 +9,5 @@ alias gdi="git diff -i"
 # Functions
 
 branches_by_date() {
-  git branch -r |grep -v HEAD | awk '{ print $1 }' |while read BRANCH; do \git log -n 1 $BRANCH --pretty="format:%ai %h $BRANCH        %an <%ae> %n"; done |sort -n
+  git branch -r |grep -v HEAD | awk '{ print $1 }' |while read BRANCH; do git log -n 1 $BRANCH --pretty="format:%ai %h $BRANCH        %an <%ae> %n"; done |sort -n
 }
