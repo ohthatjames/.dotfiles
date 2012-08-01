@@ -1,5 +1,6 @@
 source ~/.dotfiles/path.sh
 source ~/.dotfiles/delete_branch.sh
+source ~/.dotfiles/failing_features.sh
 source ~/.dotfiles/git.sh
 source ~/.dotfiles/homebrew.sh
 source ~/.dotfiles/rails.sh
