@@ -11,4 +11,4 @@ trap 'timer_start' DEBUG
 PROMPT_COMMAND=timer_stop
 
 # set the PS1 variable
-PS1="\e[0;37m\]\w\[\e[0;33;49m\]\$(__git_ps1)\[\e[0;0m\] \e[1;32m\]\$(~/.rvm/bin/rvm-prompt)\[\e[0;0m\] \e[0;36m\](last: \${timer_show}s)\[\e[0;0m\]\n$ "
+PS1="\e[0;37m\]\W\[\e[0;33;49m\]\$(__git_ps1)\[\e[0;0m\] \e[0;36m\](\${timer_show}s)\[\e[0;0m\] $ "
