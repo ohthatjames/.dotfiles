@@ -7,3 +7,8 @@ source ~/.dotfiles/ps1.sh
 source ~/.dotfiles/rails.sh
 source ~/.dotfiles/ruby.sh
 source ~/.dotfiles/rvm.sh
+
+for file in ~/.dotfiles/private/*.sh
+do
+  source $file
+done
