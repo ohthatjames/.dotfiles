@@ -1,2 +1,5 @@
 alias be="bundle exec"
 
+export RUBY_HEAP_MIN_SLOTS=600000
+export RUBY_GC_MALLOC_LIMIT=59000000
+export RUBY_HEAP_FREE_MIN=100000
