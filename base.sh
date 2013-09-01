@@ -1,3 +1,4 @@
+source ~/.dotfiles/bd.sh
 source ~/.dotfiles/delete_branch.sh
 source ~/.dotfiles/failing_features.sh
 source ~/.dotfiles/git.sh
