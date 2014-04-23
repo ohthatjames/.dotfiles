@@ -10,7 +10,10 @@ source ~/.dotfiles/rails.sh
 source ~/.dotfiles/ruby.sh
 source ~/.dotfiles/rvm.sh
 
-for file in ~/.dotfiles/private/*.sh
-do
-  source $file
-done
+if test -e `echo "~/.dotfiles/private/*.sh" | cut -d' ' -f1`
+then
+  for file in ~/.dotfiles/private/*.sh
+  do
+    source $file
+  done
+fi
