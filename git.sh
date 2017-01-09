@@ -12,6 +12,10 @@ alias rbi="git rebase --autosquash -i"
 
 # Functions
 
-branches_by_date() {
+function branches_by_date {
   git branch -r |grep -v HEAD | awk '{ print $1 }' |while read BRANCH; do git log -n 1 $BRANCH --pretty="format:%ai %h $BRANCH        %an <%ae> %n"; done |sort -n
+}
+
+function branch_update_against_master {
+  git fetch && git rebase origin/master && git push --force-with-lease
 }
