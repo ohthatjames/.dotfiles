@@ -1,7 +1,16 @@
+[push]
+	default = simple
 [alias]
   st = status
-  ci = commit
   co = checkout
+  ci = commit
+  ld = log --decorate
+  p = pull
+  oops = commit --amend --no-edit
+  praise = blame
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbi = rebase -i --autosquash
   w = whatchanged
 
 [diff]
