@@ -1,0 +1,4 @@
+'.source.ruby':
+  'double':
+    'prefix': 'dou'
+    'body': '${1:var} = double(:${1:var}${2:})'
