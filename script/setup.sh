@@ -6,8 +6,9 @@ ln -sf `pwd`/files/atom-snippets.cson ~/.atom/snippets.cson
 echo "Git aliases..."
 
 git config --global alias.st 'status'
-git config --global alias.co 'checkout'
 git config --global alias.ci 'commit'
+git config --global alias.co 'checkout'
+git config --global alias.cp 'cherry-pick'
 git config --global alias.ld 'log --decorate'
 git config --global alias.p 'pull'
 git config --global alias.oops 'commit --amend --no-edit'
