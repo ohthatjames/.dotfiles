@@ -1,8 +1,9 @@
 
-# Symlink files
+echo "Symlinking..."
+
 ln -sf `pwd`/files/atom-snippets.cson ~/.atom/snippets.cson
 
-# Git aliases
+echo "Git aliases..."
 
 git config --global alias.st 'status'
 git config --global alias.co 'checkout'
@@ -16,7 +17,7 @@ git config --global alias.rbc 'rebase --continue'
 git config --global alias.rbi 'rebase -i --autosquash'
 git config --global alias.w 'whatchanged'
 
-# Other git defaults
+echo "Other git defaults..."
 
 git config --global commit.verbose true
 git config --global core.excludesfile ~/.gitignore_global
@@ -28,7 +29,7 @@ git config --global user.name "James Hunt"
 git config --global user.email "`echo bugungwnzrf@tznvy.pbz | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'`"
 
 
-# Atom packages
+echo "Atom packages..."
 
 apm install language-rust
 apm install ohthatjames/letify
