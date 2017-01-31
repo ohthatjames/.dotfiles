@@ -1,0 +1,3 @@
+'.platform-darwin atom-text-editor':
+  'ctrl-alt-cmd-down': 'symbols-view:go-to-declaration'
+  'ctrl-alt-cmd-up': 'symbols-view:return-from-declaration'
