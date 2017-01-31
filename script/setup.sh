@@ -33,6 +33,7 @@ git config --global user.email "`echo bugungwnzrf@tznvy.pbz | tr '[A-Za-z]' '[N-
 
 echo "Atom packages..."
 
+apm install jumpy
 apm install language-rust
 apm install ohthatjames/letify
 apm install pigments
