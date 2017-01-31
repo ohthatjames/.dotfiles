@@ -13,7 +13,7 @@ alias rbi="git rebase --autosquash -i"
 # Functions
 
 function branches_by_date {
-  git branch -r |grep -v HEAD | awk '{ print $1 }' |while read BRANCH; do git log -n 1 $BRANCH --pretty="format:%ai %h $BRANCH        %an <%ae> %n"; done |sort -n
+  git branch |grep -v HEAD | awk '{ print $1 }' |while read BRANCH; do git log -n 1 $BRANCH --pretty="format:%ai %h $BRANCH        %an <%ae> %n"; done |sort -n
 }
 
 function branch_update_against_master {
