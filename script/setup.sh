@@ -38,3 +38,4 @@ apm install pigments
 apm install rails-rspec
 apm install rspec-snippets
 apm install ohthatjames/ruby-initializer-variables
+apm install symbol-gen
