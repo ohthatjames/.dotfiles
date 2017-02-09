@@ -21,6 +21,7 @@ git config --global alias.w 'whatchanged'
 
 echo "Other git defaults..."
 
+git config --global branch.autosetuprebase always
 git config --global commit.verbose true
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.editor "atom --wait"
