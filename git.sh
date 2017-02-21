@@ -21,3 +21,7 @@ function branches_by_date {
 function branch_update_against_master {
   git fetch && git rebase origin/master && git push --force-with-lease
 }
+
+function last_branches_checked_out {
+  git reflog | grep 'checkout: moving' | head -10 | grep -oE '[^ ]+$'
+}
