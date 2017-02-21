@@ -7,7 +7,7 @@ ln -sf `pwd`/files/atom-keymap.cson ~/.atom/keymap.cson
 echo "Git aliases..."
 
 git config --global alias.st 'status'
-git config --global alias.ci 'commit'
+git config --global alias.ci 'commit -v'
 git config --global alias.co 'checkout'
 git config --global alias.cp 'cherry-pick'
 git config --global alias.ld 'log --decorate'
