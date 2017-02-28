@@ -8,6 +8,7 @@ echo "Git aliases..."
 
 git config --global alias.st 'status'
 git config --global alias.ci 'commit -v'
+git config --global alias.cia 'commit --amend -v'
 git config --global alias.co 'checkout'
 git config --global alias.cp 'cherry-pick'
 git config --global alias.ld 'log --decorate'

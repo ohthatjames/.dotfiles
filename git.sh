@@ -6,11 +6,14 @@ alias gd="git diff"
 alias gdc="git diff --cached"
 alias gdci="git diff --cached -w"
 alias gdi="git diff -w"
+alias gl="git log"
 alias gpf="git push --force-with-lease"
 alias gpu="git push -u origin HEAD"
 alias rba="git rebase --abort"
 alias rbc="git rebase --continue"
 alias rbi="git rebase --autosquash -i"
+alias rbio="git rebase --autosquash -i origin/master"
+alias rbo="git rebase origin/master"
 
 # Functions
 
