@@ -18,6 +18,8 @@ git config --global alias.praise 'blame'
 git config --global alias.rba 'rebase --abort'
 git config --global alias.rbc 'rebase --continue'
 git config --global alias.rbi 'rebase -i --autosquash'
+git config --global alias.rbio 'rebase -i --autosquash origin/master'
+git config --global alias.rbo 'rebase origin/master'
 git config --global alias.w 'whatchanged'
 
 echo "Other git defaults..."
