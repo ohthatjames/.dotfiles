@@ -13,7 +13,7 @@ alias gpu="git push -u origin HEAD"
 # Functions
 
 function branches_by_date {
-  git branch |grep -v HEAD | awk '{ print $1 }' |while read BRANCH; do git log -n 1 $BRANCH --pretty="format:%ai %h $BRANCH        %an <%ae> %n"; done |sort -n
+  git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)'|column -ts'|'
 }
 
 function branch_update_against_master {
