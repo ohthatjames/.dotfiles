@@ -5,7 +5,8 @@ features() {
     echo "No argument supplied"
     return
   fi
-  spring rspec "spec/features/$1"
+  local file_name=$(echo $1 | sed -e 's/^spec\/features\///g')
+  spring rspec "spec/features/$file_name"
 }
 
 _features() {
