@@ -30,6 +30,14 @@ git config --global commit.verbose true
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.editor "atom --wait"
 git config --global log.decorate true
+git config --global merge.railsschema.name 'newer Rails schema version'
+git config --global merge.railsschema.driver "ruby -e 'system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B);
+  b = File.read(%(%A));
+  b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.version: (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.version: (\\d+). do\\n>+ .*/) {
+    %(ActiveRecord::Schema.define(:version => #{[\$1, \$2].max}) do);
+  };
+  File.open(%(%A), %(w)) {|f| f.write(b)};
+  exit 1 if b.include?(%(<)*%L)'"
 git config --global push.default simple
 git config --global rebase.autosquash true
 git config --global user.name "James Hunt"
