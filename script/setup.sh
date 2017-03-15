@@ -34,7 +34,7 @@ git config --global merge.railsschema.name 'newer Rails schema version'
 git config --global merge.railsschema.driver "ruby -e 'system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B);
   b = File.read(%(%A));
   b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.version: (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.version: (\\d+). do\\n>+ .*/) {
-    %(ActiveRecord::Schema.define(:version => #{[\$1, \$2].max}) do);
+    %(ActiveRecord::Schema.define(version: #{[\$1, \$2].max}) do);
   };
   File.open(%(%A), %(w)) {|f| f.write(b)};
   exit 1 if b.include?(%(<)*%L)'"
