@@ -2,3 +2,6 @@
   'double':
     'prefix': 'dou'
     'body': '${1:var} = double(:${1:var}${2:})'
+  'save_and_open_page':
+    'prefix': 'sav'
+    'body': 'save_and_open_page'
