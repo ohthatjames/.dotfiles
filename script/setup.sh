@@ -30,6 +30,7 @@ git config --global commit.verbose true
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.editor "atom --wait"
 git config --global core.pager "/usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less"
+git config --global credential.helper 'osxkeychain'
 git config --global log.decorate true
 git config --global merge.railsschema.name 'newer Rails schema version'
 git config --global merge.railsschema.driver "ruby -e 'system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B);
