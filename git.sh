@@ -23,3 +23,13 @@ function branch_update_against_master {
 function last_branches_checked_out {
   git reflog | grep 'checkout: moving' | head -10 | grep -oE '[^ ]+$'
 }
+
+function branch_diff {
+  git show --format="format:%P" $1 | sed -e 's/ /.../' | xargs git diff
+}
+
+# Autocomplete
+
+_git_pair () {
+  __gitcomp_nl "$(git config --get-all git-pair.authors | sed 's/\([^ ]*\).*/\1/')"
+}
