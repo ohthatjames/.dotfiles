@@ -44,6 +44,20 @@ git config --global rebase.autosquash true
 git config --global user.name "James Hunt"
 git config --global user.email "`echo bugungwnzrf@tznvy.pbz | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'`"
 
+echo "Git colours"
+
+git config --global color.diff-highlight.oldNormal 'red bold'
+git config --global color.diff-highlight.oldHighlight 'red bold 52'
+git config --global color.diff-highlight.newNormal 'green bold'
+git config --global color.diff-highlight.newHighlight 'green bold 22'
+
+git config --global color.diff.commit 'green'
+git config --global color.diff.meta 'yellow'
+git config --global color.diff.frag 'cyan'
+git config --global color.diff.old 'red'
+git config --global color.diff.new 'green'
+git config --global color.diff.whitespace 'red reverse'
+
 
 echo "Atom packages..."
 
