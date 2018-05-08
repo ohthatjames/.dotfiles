@@ -27,6 +27,7 @@ echo "Other git defaults..."
 
 git config --global branch.autosetuprebase always
 git config --global commit.verbose true
+git config --global core.attributesfile "~/.dotfiles/files/.gitattributes"
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.editor "atom --wait"
 git config --global core.pager "/usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less"
@@ -58,7 +59,6 @@ git config --global color.diff.frag 'cyan'
 git config --global color.diff.old 'red'
 git config --global color.diff.new 'green'
 git config --global color.diff.whitespace 'red reverse'
-
 
 echo "Atom packages..."
 
