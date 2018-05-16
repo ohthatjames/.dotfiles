@@ -32,6 +32,7 @@ git config --global core.excludesfile ~/.gitignore_global
 git config --global core.editor "atom --wait"
 git config --global core.pager "/usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less"
 git config --global credential.helper 'osxkeychain'
+git config --global fetch.prune true
 git config --global log.decorate true
 git config --global merge.railsschema.name 'newer Rails schema version'
 git config --global merge.railsschema.driver "ruby -e 'system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B);
@@ -41,6 +42,7 @@ git config --global merge.railsschema.driver "ruby -e 'system %(git), %(merge-fi
   };
   File.open(%(%A), %(w)) {|f| f.write(b)};
   exit 1 if b.include?(%(<)*%L)'"
+git config --global pull.rebase true
 git config --global push.default simple
 git config --global rebase.autosquash true
 git config --global user.name "James Hunt"
