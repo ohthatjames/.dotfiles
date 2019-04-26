@@ -1,6 +1,6 @@
 alias be="bundle exec"
 alias rdb="bin/rails db:migrate"
-alias rdbt="bin/rails db:migrate RAILS_ENV=test"
+alias rdbt="bin/rails db:test:prepare"
 alias rc="bin/rails c"
 alias rg="bin/rails g"
 alias rgm="bin/rails g migration"

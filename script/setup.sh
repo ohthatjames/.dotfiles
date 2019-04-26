@@ -37,7 +37,7 @@ git config --global log.decorate true
 git config --global merge.railsschema.name 'newer Rails schema version'
 git config --global merge.railsschema.driver "ruby -e 'system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B);
   b = File.read(%(%A));
-  b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.version: (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.version: (\\d+). do\\n>+ .*/) {
+  b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.version: ([\\d_]+). do\\n=+\\nActiveRecord::Schema\\.define.version: ([\\d_]+). do\\n>+ .*/) {
     %(ActiveRecord::Schema.define(version: #{[\$1, \$2].max}) do);
   };
   File.open(%(%A), %(w)) {|f| f.write(b)};
@@ -65,6 +65,7 @@ git config --global color.diff.whitespace 'red reverse'
 echo "Atom packages..."
 
 apm install jumpy
+apm install language-haml
 apm install language-rust
 apm install ohthatjames/letify
 apm install pigments
