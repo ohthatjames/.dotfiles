@@ -62,17 +62,3 @@ git config --global color.diff.frag 'cyan'
 git config --global color.diff.old 'red'
 git config --global color.diff.new 'green'
 git config --global color.diff.whitespace 'red reverse'
-
-echo "Atom packages..."
-
-apm install jumpy
-apm install language-haml
-apm install language-rust
-apm install ohthatjames/letify
-apm install pigments
-apm install rails-rspec
-apm install rspec
-apm install rspec-language
-apm install ohthatjames/ruby-initializer-variables
-apm install sort-lines
-apm install symbol-gen
