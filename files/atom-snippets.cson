@@ -5,3 +5,6 @@
   'save_and_open_page':
     'prefix': 'sav'
     'body': 'save_and_open_page'
+  'pry':
+    'prefix': 'pry'
+    'body': "require 'pry'; binding.pry"
