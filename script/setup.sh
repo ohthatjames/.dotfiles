@@ -22,6 +22,7 @@ git config --global alias.rbc 'rebase --continue'
 git config --global alias.rbi 'rebase -i --autosquash'
 git config --global alias.rbio 'rebase -i --autosquash origin/master'
 git config --global alias.rbo 'rebase origin/master'
+git config --global alias.recent-branches '! git for-each-ref --sort=-committerdate refs/heads --format="%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)" | column -ts"|" | less -R'
 git config --global alias.w 'whatchanged'
 
 echo "Other git defaults..."
