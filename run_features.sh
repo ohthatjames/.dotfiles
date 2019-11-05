@@ -11,7 +11,7 @@ features() {
 
 _features() {
   local cur=${COMP_WORDS[COMP_CWORD]}
-  COMPREPLY=( $(compgen -W "$( ls spec/features )" -- $cur) )
+  COMPREPLY=( $(compgen -W "$( find spec/features | sed -n 's|^spec/features/||p' )" -- $cur) )
 }
 
 complete -F _features features
