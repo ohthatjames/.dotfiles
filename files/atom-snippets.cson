@@ -8,3 +8,6 @@
   'pry':
     'prefix': 'pry'
     'body': "require 'pry'; binding.pry"
+  'frozen string comment':
+    'prefix': 'fz'
+    'body': '# frozen_string_literal: true'
