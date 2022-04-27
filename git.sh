@@ -44,7 +44,7 @@ function recent-branch-selector() {
   read -r opt
   if [[ `seq 1 $SELECTION` =~ $opt ]]; then
     line=$(sed -n "${opt}p" <<< "$ENTITIES")
-    branch=$(echo $line | cut -f 1 -d ' ' | sed -e 's/*//')
+    branch=$(echo $line | sed -e 's/^ //' | cut -f 1 -d ' ' | sed -e 's/*//')
     git hop $branch
   fi
 }
