@@ -1,9 +1,4 @@
 
-echo "Symlinking..."
-
-ln -sf `pwd`/files/atom-snippets.cson ~/.atom/snippets.cson
-ln -sf `pwd`/files/atom-keymap.cson ~/.atom/keymap.cson
-
 echo "Git aliases..."
 
 git config --global alias.st 'status'
