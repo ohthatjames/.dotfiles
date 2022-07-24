@@ -1,8 +1,6 @@
-source ~/.dotfiles/bd.sh
 source ~/.dotfiles/git.sh
 source ~/.dotfiles/git_log.sh
 source ~/.dotfiles/homebrew.sh
-source ~/.dotfiles/marks.sh
 source ~/.dotfiles/path.sh
 source ~/.dotfiles/ruby.sh
 source ~/.dotfiles/run_features.sh
