@@ -13,4 +13,4 @@ then
   done
 fi
 
-export BUNDLER_EDITOR=atom
+export BUNDLER_EDITOR=code

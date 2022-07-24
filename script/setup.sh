@@ -32,7 +32,7 @@ git config --global branch.autosetuprebase always
 git config --global commit.verbose true
 git config --global core.attributesfile "~/.dotfiles/files/.gitattributes"
 git config --global core.excludesfile ~/.gitignore_global
-git config --global core.editor "atom --wait"
+git config --global core.editor "code --wait"
 git config --global core.pager "/usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less"
 git config --global credential.helper 'osxkeychain'
 git config --global fetch.prune true
