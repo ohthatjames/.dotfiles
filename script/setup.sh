@@ -7,7 +7,6 @@ git config --global alias.cia 'commit --amend -v'
 git config --global alias.co 'checkout'
 git config --global alias.cp 'cherry-pick'
 git config --global alias.fixup "!git log -n 15 --oneline --color=always | fzf --ansi | awk '{ print $1 }' | xargs git commit --fixup"
-git config --global alias.hop '! SKIP_HOOKUP=1 git checkout'
 git config --global alias.ld 'log --decorate'
 git config --global alias.p 'pull'
 git config --global alias.pnp '!git pull -r && git push'
