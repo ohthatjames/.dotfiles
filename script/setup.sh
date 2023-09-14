@@ -6,7 +6,7 @@ git config --global alias.ci 'commit -v'
 git config --global alias.cia 'commit --amend -v'
 git config --global alias.co 'checkout'
 git config --global alias.cp 'cherry-pick'
-git config --global alias.fixup "!git log -n 15 --oneline --color=always | fzf --ansi | awk '{ print $1 }' | xargs git commit --fixup"
+git config --global alias.fixup "!git log -n 15 --oneline --color=always | fzf --ansi | awk '{ print \$1 }' | xargs git commit --fixup"
 git config --global alias.ld 'log --decorate'
 git config --global alias.p 'pull'
 git config --global alias.pnp '!git pull -r && git push'
@@ -27,8 +27,7 @@ git config --global commit.verbose true
 git config --global core.attributesfile "~/.dotfiles/files/.gitattributes"
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.editor "code --wait"
-git config --global core.pager "/usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less"
-git config --global credential.helper 'osxkeychain'
+git config --global core.pager "$(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight | less"
 git config --global fetch.prune true
 git config --global log.decorate true
 git config --global merge.railsschema.name 'newer Rails schema version'
