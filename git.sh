@@ -29,24 +29,8 @@ function branch_diff {
 }
 
 function recent-branch-selector() {
-  ENTITIES=$(git for-each-ref --sort=-committerdate refs/heads --format="%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)" | column -ts"|" | head -10)
-  SELECTION=1
-
-  while read -r line; do
-    echo "$SELECTION) $line"
-    ((SELECTION++))
-  done <<< "$ENTITIES"
-
-  ((SELECTION--))
-
-  echo
-  printf 'Select an branch from the above list: '
-  read -r opt
-  if [[ `seq 1 $SELECTION` =~ $opt ]]; then
-    line=$(sed -n "${opt}p" <<< "$ENTITIES")
-    branch=$(echo $line | sed -e 's/^ //' | cut -f 1 -d ' ' | sed -e 's/*//')
-    git checkout $branch
-  fi
+  branch=$(git for-each-ref --sort=-committerdate refs/heads --format="%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)" | column -ts"|" | head -20 | fzf | sed -e 's/^[[:space:]]//' | sed -e 's/^\*//' | cut -f 1 -d " ")
+  git checkout $branch
 }
 
 # Autocomplete
